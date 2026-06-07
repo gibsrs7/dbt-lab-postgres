@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: erp_origem         # Um apelido lógico para o sistema fonte
+    schema: kimball_stg      # O schema físico no PostgreSQL onde o Apache Hop/Ingestão gravou
+    tables:
+      - name: src_produtos
+      - name: src_vendas

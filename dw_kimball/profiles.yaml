@@ -1,0 +1,12 @@
+postgres_lab_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DBT_DB_HOST') }}"
+      user: "{{ env_var('DBT_DB_USER') }}"
+      password: "{{ env_var('DBT_DB_PASSWORD') }}"
+      port: 5432
+      dbname: "{{ env_var('DBT_DB_NAME') }}"
+      schema: public # Schema padrão genérico (será sobrescrito pelo dbt_project.yml)
+      threads: 4 # Nível de paralelismo para execução simultânea das tabelas
