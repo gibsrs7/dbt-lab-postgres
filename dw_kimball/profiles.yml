@@ -8,5 +8,4 @@ postgres_lab_dbt:
       password: "{{ env_var('DBT_DB_PASSWORD') }}"
       port: 5432
       database: "{{ env_var('DBT_DB_NAME') }}"
-      schema:
       threads: 4 # Nível de paralelismo para execução simultânea das tabelas
